@@ -1,0 +1,96 @@
+body {
+  font-family: Roboto, Arial, sans-serif;
+  background: white;
+  color: #333;
+}
+
+#url-input {
+  width: 100%;
+  text-align: center;
+}
+
+#url-output {
+  display: none;
+}
+
+#yt-player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#player-container {
+  display: none;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  text-align: center;
+}
+
+#size-container {
+  margin: 0 auto;
+}
+
+#start-input, #end-input {
+  width: 100px;
+  display: none;
+  text-align: right;
+  border-bottom: 1px solid red;
+}
+
+#end-input {
+  float: right;
+}
+
+input {
+  border: none;
+  background: white;
+  color: black;
+  height: 40px;
+  font-size: 2em;
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.jumbotron {
+  background: rgba(0,0,0,0);
+  margin-bottom: 0px !important;
+}
+
+#moving-row {
+  margin-top: -10px;
+  transition: all 0.3s ease;
+}
+
+#moving-row.active {
+  margin-top: 15vh !important;
+  transition: all 0.3s ease;
+}
+
+#moving-row.active #url-input {
+  border-bottom: 1px red solid;
+}
+
+#last-row {
+  margin-bottom: 10vh;
+}
+/* hide up/down arrows ("spinners") on input fields marked type="number" */
+.no-spinners {
+  -moz-appearance:textfield;
+}
+
+.no-spinners::-webkit-outer-spin-button,
+.no-spinners::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+#copy-icon {
+  display: none;
+}

