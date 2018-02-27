@@ -31,6 +31,7 @@ function onYouTubeIframeAPIReady() {
   ytplayer = new YT.Player('yt-player', {
     playerVars: { 'autoplay': 1 },
   });
+  ytplayer.tabIndex = -1;
 }
 
 function resetTimeInputs() {
